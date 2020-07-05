@@ -52,6 +52,7 @@ public class Main {
                     String numChar = String.valueOf(num.charAt(i));
                     if (!map.containsValue(numChar)) {
                         flag = false;
+                        System.out.println("Число не существует в данной системе счисления, введите существующее");
                         break;
                     }
                 }
@@ -131,9 +132,8 @@ public class Main {
         for (int i = 0; i < x.length(); i++) {
             String numChar = String.valueOf(x.charAt(i));
             int mult = Integer.parseInt(map.get(numChar));
-            transform += mult * Math.pow(10.0, (x.length() - 1) - i);
+            transform += mult * Math.pow(a, (x.length() - 1) - i);
         }
-
         return transform;
     }
 
